@@ -11,25 +11,30 @@
     <title>CRUD TEST</title>
   </head>
   <body>
-   <button type="button" class="btn btn-primary position-absolute start-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Nuevo Usuario
+            
+
+         <br><br><br>
+   <button type="button" class="btn btn-primary btn-lg position-absolute start-50 " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Array
 </button>
 
 <br><br><br>
 
 <div class="container">
   <div class="col-12">
-  <table class="table" id="list">
+  <table class="table table-bordered border-secondary table-hover table aling-middle" id="lista">
   <thead>
     <tr>
+      <th scope="col">Id</th>
       <th scope="col">Valor 1</th>
       <th scope="col">Valor 2</th>
       <th scope="col">Valor 3</th>
       <th scope="col">Valor 4</th>
+      <th scope="col">Botones</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
+  <tbody id="reference">
+    <tr class="align-bottom" id="editRow">
       
     </tr>
   </tbody>
@@ -48,16 +53,16 @@
       </div>
       <div class="modal-body">
         <form id="CreationForm">
-  <label>Valor 1</label> <input class="form-control form-control.lg" type="number" name="valor1">
+  <label>Valor 1</label> <input class="form-control form-control.lg" type="number" name="valor_1">
   <br><br>
-  <label>Valor 2</label> <input class="form-control form-control.lg" type="number" name="valor2">
+  <label>Valor 2</label> <input class="form-control form-control.lg" type="number" name="valor_2">
   <br><br>
-   <label>Valor 3</label> <input class="form-control form-control.lg" type="number" name="valor3">
+   <label>Valor 3</label> <input class="form-control form-control.lg" type="number" name="valor_3">
   <br><br>
-  <label>Valor 4</label> <input class="form-control form-control.lg" type="number" name="valor4">
+  <label>Valor 4</label> <input class="form-control form-control.lg" type="number" name="valor_4">
   <br><br>
   
-  
+       
       </div>
       <div class="modal-footer">
         <div  class="form-action-buttons">
@@ -72,9 +77,40 @@
   </div>
 </div>
 
+
+<div class="modal fade" id="edit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEd">Editar Array</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="editModal">
+  <label>Valor 1</label> <input class="form-control form-control.lg" type="number" id="valor_edition_1">
+  <br><br>
+  <label>Valor 2</label> <input class="form-control form-control.lg" type="number" id="valor_edition_2">
+  <br><br>
+   <label>Valor 3</label> <input class="form-control form-control.lg" type="number" id="valor_edition_3">
+  <br><br>
+  <label>Valor 4</label> <input class="form-control form-control.lg" type="number" id="valor_edition_4">
+  <br><br>
+   
+      </div>
+      <div class="modal-footer">
+        <div  class="form-action-buttons">
+           <button class=" btn btn-primary btn-md" type="submit" id="actualizar">Actualizar</button>
+           </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   
   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script src="public/app.js" type="module"></script>
+<script src="style.css"></script>
 </body>
 </html>
